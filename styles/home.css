@@ -1,6 +1,7 @@
 @import "tailwindcss";
 *{
   margin: 0;
+  transition: 0.4s ease-in-out;
 }
 /* Fonts */
 .noto-serif-bengali {
@@ -88,10 +89,17 @@ body{
 }
 
 /* Card & History Section */
+.card-section{
+  display: grid;
+  grid-template-columns: auto 400px;
+  gap: 24px;
+  padding: 24px;
+}
+
 .card-container{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
 }
 
 .card{
@@ -146,13 +154,83 @@ body{
   font-size: 16px;
   color: #5C5C5C;
   width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-copy:hover{
+  background-color: rgb(230, 230, 230);
 }
 
 .btn-call{
   padding: 10px 16px;
   background-color: #00A63E;
+  border: 1px solid #00A63E;
   border-radius: 8px;
   font-size: 16px;
   color:white;
   width: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
+
+.btn-call:hover{
+  background-color: #018531;
+  border: 1px solid #00A63E;
+  color:white;
+}
+
+/* History Section */
+.history-container{
+  background-color: white;
+  padding: 24px;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.15);
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.fa-clock{
+  color: #5C5C5C;
+  margin-right: 5px;
+}
+
+.btn-history-clear{
+  padding: 12px 36px;
+  border-radius: 150px;
+  background-color: #00A63E;
+  color: white;
+}
+
+.btn-history-clear:hover{
+  background-color: #018531;
+}
+
+.history-cards{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.history-card{
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #FAFAFA;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+}
+
