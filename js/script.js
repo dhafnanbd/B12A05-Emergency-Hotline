@@ -14,6 +14,10 @@ for (const button of copyButtons){
         let currentCopyCount = innerTextAsNumber('total-copy-count');
         const increaseCopyCount = currentCopyCount+=1;
         setInnerText('total-copy-count', increaseCopyCount);
+
+        const card = this.closest('.card');
+        const serviceNmber = card.querySelector('.service-number').innerText;
+        navigator.clipboard.writeText(serviceNmber);
     })
 }
 
