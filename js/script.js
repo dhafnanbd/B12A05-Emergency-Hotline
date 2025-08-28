@@ -56,7 +56,7 @@ for (const button of callButtons) {
         else {
             const message = '📞 Calling ' + serviceTitle + ' ' + serviceNmber + '...';
 
-            callData = {
+            let callData = {
                 service: serviceTitleBn,
                 Number: serviceNmber,
                 time: new Date().toLocaleTimeString()
@@ -78,10 +78,8 @@ for (const button of callButtons) {
                     <p class='text-right'>${history.time}</p>
                 </div>
                 `
-
                 callHistoryContainer.appendChild(div)
             }
-
             alert(message);
         }
 
@@ -93,7 +91,7 @@ for (const button of callButtons) {
 // Clear History Function
     const clearButton = document.getElementById('btn-clear')
         .addEventListener('click', function () {
-            historyContainer = document.getElementById('history-card-container');
+            let historyContainer = document.getElementById('history-card-container');
             historyContainer.innerText = "";
             callHistory = [];
             return;
